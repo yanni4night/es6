@@ -1,0 +1,33 @@
+{
+  "name": "es6",
+  "version": "0.1.0",
+  "description": "es6 festures test",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanni4night/es6.git"
+  },
+  "keywords": [
+    "es6",
+    "ecma"
+  ],
+  "author": "yanni4night@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanni4night/es6/issues"
+  },
+  "homepage": "https://github.com/yanni4night/es6",
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-shell": "~1.1.1",
+    "load-grunt-tasks": "~1.0.0",
+    "time-grunt": "~1.0.0"
+  },
+  "dependencies": {
+    "colors": "^1.0.3",
+    "grunt": "~0.4.5"
+  }
+}
