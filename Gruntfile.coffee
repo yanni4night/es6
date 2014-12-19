@@ -4,7 +4,7 @@ module.exports = (grunt) ->
     grunt.initConfig
         watch:
             js:
-                files: ["cases/*.js", "index.js"]
+                files: ["cases/{,*/}*.js", "index.js"]
                 tasks: ["shell"]
         shell:
             test:
