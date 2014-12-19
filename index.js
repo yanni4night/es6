@@ -15,7 +15,7 @@ var grunt = require('grunt');
 var colors = require('colors');
 var path = require('path');
 
-grunt.file.expand('./cases/*.js').forEach(function(file) {
+grunt.file.expand('./cases/{,*/}*.js').forEach(function(file) {
     var module = path.basename(file).slice(0, -3).replace(/[A-Z]/g, function(n) {
         return " " + n.toLowerCase();
     });
@@ -23,6 +23,6 @@ grunt.file.expand('./cases/*.js').forEach(function(file) {
         require(file);
         console.log(module.bgGreen.magenta);
     } catch (e) {
-        console.log(module.bgRed.white);
+        console.log(module.bgRed.white, e.message.red);
     }
 });
