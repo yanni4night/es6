@@ -9,7 +9,6 @@
   * @version 0.1.0
   * @since 0.1.0
   */
-"use strict";
 var assert = require("assert");
 
 assert.throws(() => {
