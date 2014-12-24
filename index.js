@@ -16,9 +16,9 @@ var colors = require('colors');
 var path = require('path');
 /*globals console:true*/
 grunt.file.expand('./cases/{,*/}*.js').forEach(function(file) {
-    var module = path.basename(file).slice(0, -3).replace(/[A-Z]/g, function(n) {
+    var module = file.slice(0, -3).replace(/^\.\//,'').replace(/[A-Z]/g, function(n) {
         return " " + n.toLowerCase();
-    });
+    }).replace(/\//g,' -> ');
     try {
         require(file);
         console.log(module.bgGreen.magenta);
