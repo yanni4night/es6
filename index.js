@@ -20,7 +20,9 @@ grunt.file.expand('./cases/{,*/}*.js').forEach(function(file) {
         return " " + n.toLowerCase();
     }).replace(/\//g,' -> ');
     try {
-        require(file);
+        if(true !== Function(grunt.file.read(file))()){
+            throw new Error('Failed');
+        }
         console.log(module.bgGreen.magenta);
     } catch (e) {
         console.log(module.bgRed.white, e.message.red);
