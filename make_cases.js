@@ -11,6 +11,7 @@
  */
 "use strict";
 var grunt = require('grunt');
+/*var map={};jQuery('tr[data-parent]').each(function(idx,item){var key = $(item).attr('data-parent');var exs = map[key]=map[key]||{};var ex = $(item).find('td:eq(0)').text();exs[ex]=$(item).find('script[data-source]').attr('data-source')});JSON.stringify(map);*/
 
 var es6Defination = grunt.file.readJSON('./es6.json');
 
